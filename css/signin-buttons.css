@@ -1,0 +1,25 @@
+/*
+   abbreviations:
+   fb - facebook
+   gp - google-plus
+ */
+
+div#fb_signin, div#gp_signin {
+	margin: 0 0.5em;
+}
+div#fb_signin {
+	background-color: #3b5998;
+}
+div#gp_signin {
+	background-color: #dd4b39;
+}
+span.fb_icon, span.gp_icon {
+	width: 29px;
+	height: 29px;
+}
+span.fb_icon {
+	background: url('/img/fb-icon.png'); /* size: 29px by 29px */
+}
+span.gp_icon {
+	background: url('/img/gp-icon.png'); /* size: 32px by 32px */
+}

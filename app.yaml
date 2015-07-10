@@ -1,0 +1,45 @@
+application: nextclimate
+version: beta-001
+runtime: python27
+api_version: 1
+threadsafe: no
+
+builtins:
+- remote_api: on
+
+handlers:
+#---Static Files---#
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+- url: /favicon.ico
+  static_files: img/favicon.ico
+  upload: img/favicon.ico
+#---Static Directories---#
+- url: /img
+  static_dir: img
+- url: /css
+  static_dir: css
+- url: /htm
+  static_dir: htm
+- url: /js
+  static_dir: js
+#---Scripts---#
+#--accessible to admins only--#
+# remotely upload data to the datastore:
+- url: /remote_api
+  script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
+  login: admin
+#--accessible to all end-users--#
+# route all end-user accessible requests to index.py:
+- url: /.*
+  script: index.app
+# exceptions to the above routing rule:
+- url: /fbChannel
+  script: fbChannel.py
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest

@@ -1,0 +1,38 @@
+div#facebook_signin, div#google_signin {
+	width: 108px;
+	font-size: 14px;
+	margin-left: 7px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	white-space: nowrap;
+}
+div#facebook_signin {
+	background-color: #3b5998;
+}
+div#facebook_signin:hover {
+	background-color: #4e69a2;
+}
+div#google_signin {
+	background-color: #dd4b39;
+}
+div#google_signin:hover {
+	background-color: #e74b37;
+}
+span.facebook_icon {
+	background: url("/img/facebook-signin.png") no-repeat center;
+	width: 29px;
+	height: 29px;
+	border-right: 1px #3b5998 solid; /*#2f477a*/
+}
+span.google_icon {
+	background: url("/img/google-signin.png") no-repeat center;
+	width: 32px;
+	height: 32px;
+	border-right: 1px #dd4b39 solid; /*#bb3f30*/
+}
+span.text_button {
+	color: #f8f8ff;
+	font-family: "Roboto", "Helvetica Neue", sans-serif;
+	padding: 0 7px;
+}
