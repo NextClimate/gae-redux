@@ -92,3 +92,8 @@ span.footer {
 	line-height: 3em;
 	padding: 0 0.5em;
 }
+img {
+	display: block;
+	margin: 1.5em;
+	width: 90%;
+}
