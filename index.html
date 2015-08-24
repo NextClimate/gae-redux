@@ -2,8 +2,6 @@
 
 <!--
 abbreviations:
-fb - facebook
-gp - google-plus
 tw - twitter
 js - javascript
 sdk - software development kit
@@ -31,23 +29,9 @@ sdk - software development kit
 
 <!-- stylesheets -->
 <link rel='stylesheet' href='/css/site-theme.css' type='text/css'/>
-<link rel='stylesheet' href='/css/signin-buttons.css' type='text/css'/>
 
 <!-- external javascript libraries -->
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
-
-<!-- gp sign-in page-level configuration parameters -->
-<meta name='google-signin-clientid' content='349214184235.apps.googleusercontent.com'/>
-<meta name='google-signin-scope' content='https://www.googleapis.com/auth/plus.login'/>
-<meta name='google-signin-includegrantedscopes' content='true'/>
-<meta name='google-signin-requestvisibleactions' content='http://schema.org/AddAction'/>
-<meta name='google-signin-callback' content='gp_signin_callback'/>
-<meta name='google-signin-cookiepolicy' content='http://www.nextclimate.org'/>
-
-<!-- dynamic metadata -->
-<script type='text/javascript'>
-$('meta[name=google-signin-cookiepolicy]').attr('content', 'http://' + window.location.host);
-</script>
 </head>
 
 <body>
@@ -60,48 +44,18 @@ $('meta[name=google-signin-cookiepolicy]').attr('content', 'http://' + window.lo
 
 <div id='wrapper_footer'>
 <div class='flushleft'>
-<span class='basic footer'><a href='https://twitter.com/NextClimate' class='twitter-follow-button' data-size='small' data-show-screen-name='false' data-count='none' data-dnt='true'></a></span>
 <span class='basic footer'><a href='/htm/about.html' id='about'>About</a></span>
 <span class='basic footer'><a href='/htm/programs.html' id='programs'>Programs</a></span>
-<span class='basic footer'><a href='/htm/consultancy.html' id='consultancy'>Consultancy</a></span>
 </div>
 <div class='flushright'>
-<div id='wrapper_signin' style='display:inline-block'>
-<span class='basic footer'>Sign In With:</span>
-<div id='fb_signin' class='wrapper_button' data-app-id='468833723295483'><span class='basic fb_icon'></span></div>
-<div id='gp_signin' class='wrapper_button'><span class='basic gp_icon'></span></div>
-</div>
-<div id='wrapper_signout' style='display:none'>
-<span class='basic footer'><a href='javascript:void(0)' id='signout'>Sign Out, <span id='first_name'></span></a></span>
-</div>
+<span class='basic footer'><a href='https://twitter.com/NextClimate' class='twitter-follow-button' data-size='small' data-show-screen-name='false' data-count='none' data-dnt='true'></a></span>
+<span class='basic footer'><a href='mailto:info@nextclimate.org' id='about'>info@nextclimate.org</a></span>
 </div>
 <div class='clear'></div>
 </div>
 
-<div id='fb-root'></div>
-<!-- fb-js-sdk is inserted here -->
-
-<div id='gp_root'></div>
-<!-- gp-js-sdk is inserted here -->
-
 <div id='tw_root'></div>
 <!-- tw-js-sdk is inserted here -->
-
-<!-- global parameters -->
-<script type='text/javascript'>
-window.fb_signed_in = Boolean(false);
-window.gp_signed_in = Boolean(false);
-</script>
-
-<script type='text/javascript' src='/js/fb-load-sdk.js'></script> <!-- load fb-js-sdk (async) -->
-<script type='text/javascript' src='/js/fb-auth-handlers.js'></script> <!-- our fb oauth2 handlers -->
-
-<script type='text/javascript' src='/js/gp-load-sdk.js'></script> <!-- load gp-js-sdk (async) -->
-<script type='text/javascript' src='/js/gp-auth-handlers.js'></script> <!-- our gp oauth2 handlers -->
-
-<script type='text/javascript' src='/js/fb_gp-click-handlers.js'></script> <!-- #fb/gp_signin, #signout click handlers -->
-
-<script type='text/javascript' src='/js/toggle-sign_in_out.js'></script> <!-- toggle #wrapper_signin/out (async) -->
 
 <script type='text/javascript' src='/js/tw-load-sdk.js'></script> <!-- load tw-js-sdk (async) -->
 </body>
